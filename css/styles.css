@@ -94,7 +94,7 @@
    * color-2(#2F352B)
    * color-3(#1A1A1A)
    */
-    --color-1: hsla(12, 75%, 45%, 1);
+    --color-1: rgb(255, 51, 0);
     --color-2: hsla(96, 10%, 19%, 1);
     --color-3: hsla(0, 0%, 10%, 1);
 
@@ -2503,7 +2503,7 @@ td:last-child {
 }
 
 .skills-subtext {
-    color: #aaa;
+    color: var(--color-gray-17);
     font-size: 14px;
     margin-bottom: 30px;
 }
@@ -2730,8 +2730,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .glightbox-container a {
     font-weight  : 500 !important;
-    color        : var(--color-1);
-    border-bottom: 1px dotted var(--color-1);
+    color        : var(--color-1);    
 }
 
 .glightbox-container .gslide-inner-content {
@@ -3869,6 +3868,8 @@ td:last-child {
     padding : 0;
     overflow: hidden;
     position: relative;
+    border: var(--color-gray-19) solid 1px;
+    
 }
 
 .folio-entries .entry__link {
