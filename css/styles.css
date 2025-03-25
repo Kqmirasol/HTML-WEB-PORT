@@ -975,6 +975,47 @@ body {
     -moz-osx-font-smoothing   : grayscale;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: var(--color-white);
+    transition: 0.5s;
+}
+
+body.dark-mode .attention-getter,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .skill,
+body.dark-mode .text-display-title,
+body.dark-mode .s-about__block-title,
+body.dark-mode .s-about__list,
+body.dark-mode .s-about__list li a,
+body.dark-mode .s-testimonials__cite strong{
+    color: var(--color-white);
+}
+
+.theme-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.theme-toggle svg{
+    fill: var(--color-white);
+
+}
+
+.theme-toggle svg:last-child{
+    display: none;
+}
+
+body.dark-mode .theme-toggle svg:first-child{
+    display: none;
+}
+body.dark-mode .theme-toggle svg:last-child{
+    display: block;
+}
+
 p {
     font-size     : inherit;
     text-rendering: optimizeLegibility;
@@ -1506,7 +1547,7 @@ hr.fancy::before {
  * ## additional typography & helper classes
  * -------------------------------------------------------------------- */
 .lead,
-.attention-getter {
+.attention-getter, .attention-getter-footer {
     font-family: var(--font-1);
     font-size  : var(--text-md);
     line-height: var(--vspace-1_25);
@@ -1515,7 +1556,7 @@ hr.fancy::before {
 @media screen and (max-width: 800px) {
 
     .lead,
-    .attention-getter {
+    .attention-getter, .attention-getter-footer {
         font-size  : calc(var(--text-size) * 1.1);
         line-height: calc(1.125 * var(--space));
     }
@@ -1524,7 +1565,7 @@ hr.fancy::before {
 @media screen and (max-width: 400px) {
 
     .lead,
-    .attention-getter {
+    .attention-getter, .attention-getter-footer {
         font-size  : var(--text-size);
         line-height: var(--vspace-1);
     }
@@ -2531,6 +2572,10 @@ td:last-child {
     margin-bottom: 20px;
 }
 
+body.dark-mode .progress-bar-container {
+    background-color: var(--color-white);
+}
+
 .progress-bar {
     height: 100%;
     background-color: var(--color-1-light);
@@ -2644,7 +2689,7 @@ td:last-child {
     font-size     : 10em;
     letter-spacing: -0.05em;
     line-height   : 1;
-    color         : var(--color-gray-11);
+    color         : var(--color-gray-12);
     margin-right  : var(--vspace-0_5);
     position      : absolute;
     top           : -0.25em;
@@ -3038,7 +3083,7 @@ td:last-child {
     margin-left: var(--vspace-1);
 }
 
-.s-header__menu-links {
+.s-header__menu-links, .s-header__menu-links img {
     list-style: none;
     display   : inline-flex;
     flex-flow : row nowrap;
