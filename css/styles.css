@@ -3832,6 +3832,13 @@ td:last-child {
     color      : var(--color-text-light) !important;
 }
 
+.certifications-grid{
+    display         : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -moz-column-gap      : var(--grid-gap-h);
+    column-gap           : var(--grid-gap-h);
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * about
@@ -3970,6 +3977,7 @@ td:last-child {
 
 .s-testimonials__slide {
     position: relative;
+    align-content: center;
 }
 
 .s-testimonials__author {
@@ -3992,6 +4000,7 @@ td:last-child {
 
 .s-testimonials__cite {
     display: block;
+    align-items: center;
 }
 
 .s-testimonials__cite strong,
