@@ -2533,7 +2533,7 @@ td:last-child {
 
 .progress-bar {
     height: 100%;
-    background-color: #fbc02d;
+    background-color: var(--color-1-light);
 }
 
 /* --------------------------------------------------------------------
